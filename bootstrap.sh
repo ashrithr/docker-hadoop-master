@@ -18,7 +18,7 @@ else
   # installing libraries if any - (resource urls added comma separated to the ACP system variable)
   cd $HADOOP_PREFIX/share/hadoop/common ; for cp in ${ACP//,/ }; do  echo == $cp; curl -LO $cp ; done; cd -
 
-  $HADOOP_PREFIX/bin/hdfs namenode -format 2>> /var/log/hadoop/namenode_format.err > /var/log/hadoop/namenode_format.out
+  $HADOOP_PREFIX/bin/hdfs namenode -format
 
   touch /run/namenode_bootstrap
 fi
